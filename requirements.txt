@@ -1,0 +1,6 @@
+boto3
+google-cloud-storage
+google-api-python-client
+tqdm
+python-dotenv
+requests

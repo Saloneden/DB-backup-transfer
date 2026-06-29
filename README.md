@@ -10,10 +10,10 @@ the flow is simple: cloud sql exports the db to a gcs bucket, then the script pi
 
 install dependencies:
 ```
-pip install boto3 google-cloud-storage google-api-python-client tqdm python-dotenv requests
+pip install -r requirements.txt
 ```
 
-fill in the `.env` file with your real values  everything the scripts need is in there. then run `bucket.py` once to create the gcs bucket, and after that just run `backup-project.py` whenever you want a backup (or put it on a cron job).
+fill in the `.env` file with your real values — everything the scripts need is in there. then run `bucket.py` once to create the gcs bucket, and after that just run `backup-project.py` whenever you want a backup (or put it on a cron job).
 
 ---
 
@@ -33,6 +33,6 @@ fill in the `.env` file with your real values  everything the scripts need is in
 
 ## notes
 
-- never commit `.env` — it's already in `.gitignore`
+- the `.env` file is included here for testing purposes only — if you fork this make sure to add `.env` to your `.gitignore` before pushing your own credentials
 - you'll need a gcp service account json key, put the path to it in `GCP_KEY_PATH`
 - the gcs bucket only ever keeps today's backup, everything older gets deleted
