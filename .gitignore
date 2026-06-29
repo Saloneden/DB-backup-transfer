@@ -1,0 +1,14 @@
+# Credentials
+.env
+*.json
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+venv/
+
+# IDE
+.idea/
+DbBackupCopy/
